@@ -1,6 +1,7 @@
 # This script need pigpio for operating.
 
 import pigpio
+import color
 import time
 
 pi = pigpio.pi()
@@ -8,33 +9,29 @@ pi = pigpio.pi()
 
 class LED(object):
   def __init__(self, pinR, pinG, pinB):
-    self.__red = 0
-    self.__green = 0
-    self.__blue = 0
+    self.__color = color.Color(0, 0, 0)
     self.__pinR = pinR
     self.__pinG = pinG
     self.__pinB = pinB
   
-  def color(self, var1, var2, var3):
-    self.__red = var1
-    self.__green = var2
-    self.__blue = var3
+  def color(self, var1):
+    self.__color = var1
     return True
   
   def update(self):
-    pi.set_PWM_dutycycle(self.__pinR, self.__red)
-    pi.set_PWM_dutycycle(self.__pinG, self.__green)
-    pi.set_PWM_dutycycle(self.__pinB, self.__blue)
+    pi.set_PWM_dutycycle(self.__pinR, self.__color.getRed())
+    pi.set_PWM_dutycycle(self.__pinG, self.__color.getGreen())
+    pi.set_PWM_dutycycle(self.__pinB, self.__color.getBlue())
     return True
   
   def getRed(self):
-    return self.__red
+    return self.__color.getRed()
   
   def getGreen(self):
-    return self.__green
+    return self.__color.getGreen()
   
   def getBlue(self):
-    return self.__Blue
+    return self.__color.getBlue()
   
   def getPinR(self):
     return self.__pinR
@@ -52,13 +49,14 @@ class LED(object):
     return True
 
 led = LED(27, 22, 17)
-led.color(0, 0, 255)
-led.update()
+
+white = color.Color(255, 255, 255)
+transparent = color.Color(0, 0, 0)
 
 while True:
-  led.color(255, 255, 255)
+  led.color(white)
   led.update()
   time.sleep(0.1)
-  led.color(0, 0, 0)
+  led.color(transparent)
   led.update()
   time.sleep(0.1)
