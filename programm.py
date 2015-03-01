@@ -7,7 +7,7 @@ pi = pigpio.pi()
 
 
 class LED(object):
-  def __init__(pinR, pinG, pinB):
+  def __init__(self, pinR, pinG, pinB):
     self.__red = 0
     self.__green = 0
     self.__blue = 0
@@ -15,37 +15,37 @@ class LED(object):
     self.__pinG = pinG
     self.__pinB = pinB
   
-  def color(var1, var2, var3):
+  def color(self, var1, var2, var3):
     self.__red = var1
     self.__green = var2
     self.__blue = var3
     return True
   
-  def update():
+  def update(self):
     pi.set_PWM_dutycycle(self.__pinR, self.__red)
     pi.set_PWM_dutycycle(self.__pinG, self.__green)
     pi.set_PWM_dutycycle(self.__pinB, self.__blue)
     return True
   
-  def getRed():
+  def getRed(self):
     return self.__red
   
-  def getGreen():
+  def getGreen(self):
     return self.__green
   
-  def getBlue():
+  def getBlue(self):
     return self.__Blue
   
-  def getPinR():
+  def getPinR(self):
     return self.__pinR
   
-  def getPinG():
+  def getPinG(self):
     return self.__pinG
   
-  def getPinB():
+  def getPinB(self):
     return self.__pinB
   
-  def setPins(var1, var2, var3):
+  def setPins(self, var1, var2, var3):
     self.__pinR = var1
     self.__pinG = var2
     self.__pinB = var3
