@@ -20,6 +20,8 @@ def update():
   pi.set_PWM_dutycycle(17, blue)
 
 color(0, 0, 0)
+pi.set_PWM_dutycycle(22, 255)
+pi.set_PWM_dutycycle(22, 0)
 time.sleep(0.1)
 
 var = 1
