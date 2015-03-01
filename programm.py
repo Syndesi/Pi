@@ -29,6 +29,7 @@ time.sleep(0.1)
 var = 1
 while var == 1 :
   color(255, 255, 255)
+  print red
   update()
   time.sleep(0.1)
   color(0, 0, 0)
