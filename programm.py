@@ -52,5 +52,13 @@ class LED(object):
     return True
 
 led = LED(27, 22, 17)
-led.color(255, 255, 255)
+led.color(0, 0, 255)
 led.update()
+
+while True:
+  led.color(255, 255, 255)
+  led.update()
+  time.sleep(0.1)
+  led.color(0, 0, 0)
+  led.update()
+  time.sleep(0.1)
