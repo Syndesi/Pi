@@ -5,9 +5,9 @@ import time
 
 pi = pigpio.pi()
 
-var red = 0
-var green = 0
-var blue = 0
+red = 0
+green = 0
+blue = 0
 
 def color(red2, green2, blue2):
   red = red2
@@ -25,6 +25,8 @@ time.sleep(0.1)
 var = 1
 while var == 1 :
   color(255, 255, 255)
+  update()
   time.sleep(0.1)
   color(0, 0, 0)
+  update()
   time.sleep(0.1)
