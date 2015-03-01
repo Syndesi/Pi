@@ -18,6 +18,7 @@ def update():
   pi.set_PWM_dutycycle(27, red)
   pi.set_PWM_dutycycle(22, green)
   pi.set_PWM_dutycycle(17, blue)
+  print(red, ", ", green, ", ", blue)
 
 color(0, 0, 0)
 pi.set_PWM_dutycycle(22, 255)
