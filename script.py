@@ -9,7 +9,6 @@ def color(red, green, blue):
   pi.set_PWM_dutycycle(27, red)
   pi.set_PWM_dutycycle(22, green)
   pi.set_PWM_dutycycle(17, blue)
-  return true
 
 n = 255
 blue = 0
@@ -31,3 +30,19 @@ for i in range(1,n+1):
 color(255, 255, 255)
 time.sleep(0.1)
 color(0, 0, 0)
+
+
+
+color(255, 0, 0)
+time.sleep(0.1)
+color(255, 255, 0)
+time.sleep(0.1)
+color(0, 255, 0)
+time.sleep(0.1)
+color(0, 255, 255)
+time.sleep(0.1)
+color(0, 0, 255)
+time.sleep(0.1)
+color(255, 0, 255)
+time.sleep(0.1)
+color(0, 0, ,0)
