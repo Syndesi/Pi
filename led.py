@@ -54,12 +54,12 @@ class LED(object):
     self.setColor(self, var1, var2, var3)
     self.update()
     time.sleep(var4)
-  
-  
-  led = LED(27, 22, 17)
-  
-  led.show(255, 255, 255, 1)
-  led.show(0, 0, 0, 1)
-  led.show(0, 0, 255, 1)
-  led.show(0, 0, 2, 1)
-  led.off()
+
+
+led = LED(27, 22, 17)
+
+led.show(255, 255, 255, 1)
+led.show(0, 0, 0, 1)
+led.show(0, 0, 255, 1)
+led.show(0, 0, 2, 1)
+led.off()
