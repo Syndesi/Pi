@@ -58,6 +58,6 @@ while True:
   led.color(color.black)
   led.update()
   time.sleep(0.2)
-  led.addColor(color.white, 0.01)
+  led.addColor(color(0, 0, 2), 1)
   led.update()
   time.sleep(0.2)
