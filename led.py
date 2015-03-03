@@ -62,9 +62,10 @@ led.show(64, 64, 64, 0.5)
 led.show(0, 0, 0, 0.5)
 print("LED initialisiert.")
 
-for l in range(1, 3):
+for l in range(1, 4):
   for i in range(1, 255):
-    led.show(0, 0, i, 0.5/i)
+    led.show(0, 0, i, 0.7/i)
   for i in range(255, 1, -1):
-    led.show(0, 0, i, 0.5/i)
+    led.show(0, 0, i, 0.7/i)
+  time.sleep(1)
 led.off()
