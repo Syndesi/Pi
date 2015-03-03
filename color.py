@@ -9,6 +9,24 @@ class Color(object):
     self.__green = var2
     self.__blue = var3
     return True
+  
+  def addColor(self, var1, var2):
+    self.__red += var1.__red * var2
+    self.__green += var1.__green * var2
+    self.__blue += var1.__blue * var2
+    if self.__red >= 255:
+      self.__red = 255
+    elif self.__red <= 0:
+      self.__red = 0
+    if self.__green >= 255:
+      self.__green = 255
+    elif self.__green <= 0:
+      self.__green = 0
+    if self.__blue >= 255:
+      self.__blue = 255
+    elif self.__blue <= 0:
+      self.__blue = 0
+    return True
 
   def getRed(self):
     return self.__red
