@@ -11,7 +11,6 @@ class LED(object):
     self.__red = 0
     self.__green = 0
     self.__blue = 0
-    return True
   
   def setColor(self, var1, var2, var3):
     self.__red = var1
