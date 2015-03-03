@@ -18,6 +18,10 @@ class LED(object):
     self.__color = var1
     return True
   
+  def addColor(self, var1, var2):
+    self.__color.addColor(var1, var2)
+    return True
+  
   def update(self):
     pi.set_PWM_dutycycle(self.__pinR, self.__color.getRed())
     pi.set_PWM_dutycycle(self.__pinG, self.__color.getGreen())
@@ -51,30 +55,7 @@ class LED(object):
 led = LED(27, 22, 17)
 
 while True:
-  led.color(color.white)
-  led.update()
-  time.sleep(0.1)
-  led.color(color.purple)
-  led.update()
-  time.sleep(0.1)
-  led.color(color.orange)
-  led.update()
-  time.sleep(0.1)
-  led.color(color.green)
-  led.update()
-  time.sleep(0.1)
-  led.color(color.red)
-  led.update()
-  time.sleep(0.1)
-  led.color(color.blue)
-  led.update()
-  time.sleep(0.1)
-  led.color(color.yellow)
-  led.update()
-  time.sleep(0.1)
-  led.color(color.cyan)
-  led.update()
-  time.sleep(0.1)
   led.color(color.black)
   led.update()
-  time.sleep(0.1)
+  time.sleep(0.5)
+  led.addColor(color.white, 0.3)
