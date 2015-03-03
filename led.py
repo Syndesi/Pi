@@ -50,7 +50,7 @@ class LED(object):
     return True
 
   def show(self, var1, var2, var3, var4):
-    self.setColor(self, var1, var2, var3)
+    self.setColor(var1, var2, var3)
     self.update()
     time.sleep(var4)
 
