@@ -18,6 +18,9 @@ class LED(object):
     self.__color = var1
     return True
   
+  def ccolor(self, var1, var2, var3):
+    return color.Color(var1, var2, var3)
+  
   def addColor(self, var1, var2):
     self.__color.addColor(var1, var2)
     return True
@@ -54,12 +57,10 @@ class LED(object):
 
 led = LED(27, 22, 17)
 
-blue = color.Color(0, 0, 2)
-
 while True:
   led.color(color.black)
   led.update()
   time.sleep(0.2)
-  led.addColor(blue, 1)
+  led.addColor(ccolor(0, 0, 2), 1)
   led.update()
   time.sleep(0.2)
