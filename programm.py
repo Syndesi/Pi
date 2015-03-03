@@ -54,10 +54,12 @@ class LED(object):
 
 led = LED(27, 22, 17)
 
+blue = color.Color(0, 0, 2)
+
 while True:
   led.color(color.black)
   led.update()
   time.sleep(0.2)
-  led.addColor(color(0, 0, 2), 1)
+  led.addColor(blue, 1)
   led.update()
   time.sleep(0.2)
